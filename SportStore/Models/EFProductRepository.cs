@@ -22,7 +22,7 @@ namespace SportStore.Models
             else
             {
                 Product dbEntry = ctx.Products
-                    .FirstOrDefault(product => product.ProductID == product.ProductID);
+                    .FirstOrDefault(p => p.ProductID == product.ProductID);
                 if(dbEntry != null)
                 {
                     dbEntry.Name = product.Name;
