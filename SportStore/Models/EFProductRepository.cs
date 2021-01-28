@@ -12,6 +12,7 @@ namespace SportStore.Models
         { 
             this.ctx = ctx; 
         }
+        public Product this[int ProductID] => ctx.Products.FirstOrDefault(p => p.ProductID == ProductID);
         public IQueryable<Product> Products => ctx.Products;
         public void SaveProduct (Product product)
         {

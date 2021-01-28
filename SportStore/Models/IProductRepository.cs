@@ -8,6 +8,7 @@ namespace SportStore.Models
     public interface IProductRepository
     {
         IQueryable<Product> Products { get; }
+        Product this[int ProductID] { get; }
         void SaveProduct(Product product);
         Product DeleteProduct(int productID);
     }
